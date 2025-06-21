@@ -1,20 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import SplashScreen from './Components/SplashScreen';
+import QuizScreen from './Components/QuizScreen'; 
+import SummaryScreen from './Components/SummaryScreen';
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Tab.Navigator initialRouteName="Splash">
+        <Tab.Screen name="Splash" component={SplashScreen} options={{ tabBarStyle: { display: 'none' } }} />
+        <Tab.Screen name="Quiz" component={QuizScreen} options={{ tabBarStyle: { display: 'none' } }} />
+        <Tab.Screen name="Summary" component={SummaryScreen} options={{ tabBarStyle: { display: 'none' } }} />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

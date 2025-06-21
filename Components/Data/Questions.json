@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "question": "Which is the official Language of Pakistan?",
+      "options": ["Pashto", "Urdu", "English", "Sindhi"],
+      "correctAnswer": "Urdu"
+    },
+    {
+      "id": 2,  
+      "question": "What is the chemical symbol for water?",
+      "options": ["CO2", "NaCl", "H2O", "O2"],
+      "correctAnswer": "H2O"
+    },
+    {
+      "id": 3,
+      "question": "Which Country has the Largest Population in the World?",
+      "options": ["China", "India", "Pakistan", "Indonesia"],
+      "correctAnswer": "China"
+    }
+  ]
+  
